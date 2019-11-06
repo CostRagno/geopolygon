@@ -12,7 +12,7 @@ import numpy as np
 import scipy.spatial as spt
 import matplotlib.pyplot as plt
 from matplotlib.path import Path
-import lineintersect as li
+from geopolygon import lineintersect as li
 
 def GetFirstPoint(dataset):
     ''' Returns index of first point, which has the lowest y value '''

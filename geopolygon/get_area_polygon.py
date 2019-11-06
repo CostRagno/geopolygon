@@ -9,7 +9,7 @@ from geopy.geocoders import Nominatim
 import numpy as np
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import ConcaveHull
+from geopolygon import ConcaveHull
 from  wikidata.client import Client
 import ast
 from obspy.geodetics.base import kilometer2degrees
