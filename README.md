@@ -1,12 +1,13 @@
 # geopolygon
 ---
 title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
+
 tags:
   - Python
   - geoparsing
   - city polygons
   - concave hull
-  - 
+  
 authors:
   - name: Costantino Ragno
     affiliation: 1 
@@ -18,7 +19,6 @@ affiliations:
  - name: IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
    index: 2
 date: November 2019
-bibliography: paper.bib
 ---
 # Summary
 
@@ -39,7 +39,13 @@ bounaries. The library have been used in our recent paper (Zola et al., 2019) fo
 The geopolygon Python package retrive the polygon of a geographical area from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). To accomplish this task geopolygon needs two informations: the OPS element and the OPS ID. The OPS element corresponds to the identification of the geographical OPS element. There are three OPS elements: way, nodes and relations. Where, the way connect the nodes and a set of ways and nodes is called relation. Note that a relation can be a set of relations as well. It follows that a city, for example, is a relation (which contains ways and nodes). A country is again a realtion but it contains other relations. On the ohter hand, the OPS ID is an unique code which identify each element. 
 
 Given the OPS element and the OPS ID, geopolygon Package is able to retrive only the polygons of the relations (countries, states and cities). If a given geographical area is not a relation, so for example it is a node (for example in OPS a suburb is a node), then geopolygon calculate an approximate circumference of the geographical area. To accomplish this task geopolygon uses the wikidata tag of that area to retrive the area surface in $km^2$. Then, it estimates the radius as $r = \sqrt(frac{A}{\pi})$, obtaining the approximate circumference.
-The  OPS  boundary points usually does not have the correct polygon building sequence, such as exemplified in Figure.  To solve this issue, we applied the concave hull method, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure. 
+The  OPS  boundary points usually does not have the correct polygon building sequence, such as exemplified in Figure 1.  To solve this issue, we applied the concave hull method proposed by Moreira et al. 2007, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure 1. 
+
+Figure 1:
+
+OPS raw polygon            |  Reshaped polygon 
+:-------------------------:|:-------------------------:
+![](https://github.com/CostRagno/geopolygon/blob/master/images/new_york_red-1.png)  |  ![](https://github.com/CostRagno/geopolygon/blob/master/images/new_york_green-1.png)
 
 # Example Usage 
 The installation of geopolygon can be done via [Python Package Index (pip)](https://pypi.org/project/geopolygon/), by running the following command:
@@ -64,6 +70,7 @@ The output ``city_dict`` is a dictionary which contains:
 5. ``location_info``, a ``geopy`` object which contains all the information about the location. 
 
 # References
-#---------------------------------------------------------------------------------------
 
 Zola, P., & Ragno, C., & Cortez, P. (2019, October). Inferring Twitter users home location based on trend topics. In ASA CONFERENCE 2019 Statistics for Health and Well-being BOOK OF SHORT PAPERS.
+
+Moreira, A., & Santos, M. Y. (2007). Concave hull: A k-nearest neighbours approach for the computation of the region occupied by a set of points.
