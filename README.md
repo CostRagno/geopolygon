@@ -41,9 +41,27 @@ The geopolygon Python package retrive the polygon of a geographical area from [O
 Given the OPS element and the OPS ID, geopolygon Package is able to retrive only the polygons of the relations (countries, states and cities). If a given geographical area is not a relation, so for example it is a node (for example in OPS a suburb is a node), then geopolygon calculate an approximate circumference of the geographical area. To accomplish this task geopolygon uses the wikidata tag of that area to retrive the area surface in $km^2$. Then, it estimates the radius as $r = \sqrt(frac{A}{\pi})$, obtaining the approximate circumference.
 The  OPS  boundary points usually does not have the correct polygon building sequence, such as exemplified in Figure.  To solve this issue, we applied the concave hull method, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure. 
 
-# example usage 
+# Example Usage 
 The installation of geopolygon can be done via [Python Package Index (pip)](https://pypi.org/project/geopolygon/), by running the following command:
-``pip install geopolygon``
+
+```pip install geopolygon```
+
+The main function of ``geopolygon`` is ``area_poly``. An example usage of ``area_poly`` is reported in the following code: 
+
+```Python 
+import geopolygon as gp
+city = "Rome"
+city_dict = gp.area_poly(city, concave_hull_reshape = 'yes')
+
+print(city_dict.keys())
+Out[1]: dict_keys(['type_polygon', 'raw_data', 'processed_data', 'center', 'location_info'])
+```
+The output ``city_dict`` is a dictionary which contains:
+1. ``type_polygon``, which can be "Concave Hull" or "Approximate Circumference";
+2. ``raw_data``, which contains the raw polygon as scrapered from OPS;
+3. ``processed_data``, which contains the polygon after being processed with the k-nearest neighbours algorithm;
+4. ``center``, which contains the center of the polygon;
+5. ``location_info``, a ``geopy`` object which contains all the information about the location. 
 
 # References
 #---------------------------------------------------------------------------------------
