@@ -19,7 +19,7 @@ affiliations:
    index: 2
 date: November 2019
 bibliography: paper.bib
-
+---
 # Summary
 
 Inferring the location of messages, people and events is an increasing branch of
@@ -35,6 +35,13 @@ geographic information available at city or regional level. The representation i
 performed by deriving the polygon area over the World surface to represent the City/Region 
 bounaries. The library have been used in our recent paper (Zola et al., 2019) for Twitter users geolocation to create a synthetic dataset starting from a frequency distribution of cities over the Globe surface.
 
+# The geopolygon Package
+The geopolygon Python package retrive the shape of a geographical area from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). To accomplish this task geopolygon needs two informations: the OPS element and the OPS ID. The OPS element corresponds to the identification of the geographical element. There are three elements: way, nodes and relations. Where, the way connect the nodes and a set of ways and nodes are called relations. Note that a relation can be a set of relations as well. It follows that a city, for example, is a relation (which contains ways and nodes). A country is again a realtion but it contains other relations. The OPS ID is an unique code which identify the element. The geopolygon Package is able to retrive only the polygons of the relations (countries, states and cities). Once the gepgraphical area is idenfied as relation and the OSM ID is obtained, geopolygon is able to scrape the area boundaries obtaining the polygon.
+If a given geographical area is not a relation, so for example it is a suburb (considered as a node in OPS), geopolygon calculate an approximate circumference of the geographical area. To accomplish this task geopolygon uses the wikidata tag of that area to retrive the area in $km^{2}$          
+
+In particular what geopolygon works on is the   It uses the package [geopy](https://geopy.readthedocs.io/en/stable/#),a Python 2 and 3 client for several popular geocoding web services (such as Google Maps, Bing Maps, or Nominatim), to get the OPS id of the location.   
+
+geopy makes it easy for Python developers to locate the coordinates of addresses, cities, countries, and landmarks across the globe using third-party geocoders and other data sources.
 # References
 #---------------------------------------------------------------------------------------
 
