@@ -55,7 +55,7 @@ So, given the name of a geographical area, for example the name of a city, ``geo
 
 Note that ``geopolygon`` retrieves only the polygons of the relations (countries, states and cities). If a given geographical area is not a relation, for example it could be a node, then ``geopolygon`` calculate an approximate circumference of the geographical area. To accomplish this task ``geopolygon`` uses the wikidata tag of that area to retrive the area surface A in <a href="https://www.codecogs.com/eqnedit.php?latex=km^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?km^2" title="km^2" /></a>. Then, it estimates the radius r as <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\sqrt{{A}/{\pi}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\sqrt{{A}/{\pi}}" title="r = \sqrt{{A}/{\pi}}" /></a>, obtaining the approximate circumference.
 
-The  OPS polygons usually do not have the correct building sequence, such as exemplified in Figure 1. To solve this issue, we applied the concave hull method proposed by Moreira et al. 2007, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure 1. 
+The points retrevied from OPS, usually, do not have the correct building sequence, such as exemplified in Figure 1. To solve this issue and compute the polygon that encompasses that set of points, we applied the concave hull method proposed by Moreira et al. 2007, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure 1. 
 
 Figure 1:
 
@@ -79,10 +79,10 @@ print(city_dict.keys())
 Out[1]: dict_keys(['type_polygon', 'raw_data', 'processed_data', 'center', 'location_info'])
 ```
 The output ``city_dict`` is a dictionary which contains:
-1. ``type_polygon``, which can be "Concave Hull" or "Approximate Circumference";
-2. ``raw_data``, which contains the raw polygon as scrapered from OPS;
-3. ``processed_data``, which contains the polygon after being processed with the k-nearest neighbours algorithm;
-4. ``center``, which contains the center of the polygon;
+1. ``type_polygon``, can be "Concave Hull" or "Approximate Circumference";
+2. ``raw_data``, contains the raw polygon as scrapered from OPS;
+3. ``processed_data``, contains the polygon after being processed with the k-nearest neighbours algorithm;
+4. ``center``, contains the center of the polygon;
 5. ``location_info``, a ``geopy`` object which contains all the information about the location. 
 
 # References
