@@ -36,19 +36,23 @@ performed by deriving the polygon area over the World surface to represent the C
 bounaries. The library have been used in our recent paper (Zola et al., 2019) for Twitter users geolocation to create a synthetic dataset starting from a frequency distribution of cities over the Globe surface.
 
 # The geopolygon Package
-The ``geopolygon`` Python package retrieves the polygon of a geographical area from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). To accomplish this task ``geopolygon`` needs two informations from OPS: the OPS element and the OPS ID. The OPS element identify a geographical OPS object. It exists three OPS elements: 
+The ``geopolygon`` Python package provides two kind of services. It retrieves the polygon of a geographical area from [OpenStreetMap (OPS)](https://www.openstreetmap.org/) and corrects the building sequence of the OPS polygons. To retrieve the polygons OPS polygons ``geopolygon`` needs two informations from OPS: the OPS element and the OPS ID. 
+
+The OPS element identifies a geographical OPS object. It exists three OPS elements: 
 
 1. [nodes](https://wiki.openstreetmap.org/wiki/Node), a node is one of the core elements in the OpenStreetMap data model. It consists of a single point in space defined by its latitude, longitude and node id;
 2. [way](https://wiki.openstreetmap.org/wiki/Way), a way is an ordered list of nodes;
 3. [relations](https://wiki.openstreetmap.org/wiki/Relation), ordered list of one or more nodes, ways and/or relations.
 
-It follows that a city, for example, is a relation (which contains ways and nodes). A country is again a realtion but it contains other relations. On the ohter hand, the OPS ID is an unique code which identify each OPS element. 
+It follows that a city, for example, is a relation (which contains ways and nodes). A country is again a realtion made of relations. 
+
+The OPS ID is, simply, an unique code which identify each OPS element. 
 
 So, given the name of a geographical area, for example the name of a city, ``geopolygon`` uses the ``geopy`` Python package ([geopy](https://github.com/geopy/geopy)) to get the OPS element and the OPS ID. Then,``geopolygon`` uses this information to retrieve the coordinates of the polygon which circumscribes that spacific area.
 
 Note that ``geopolygon`` retrieves only the polygons of the relations (countries, states and cities). If a given geographical area is not a relation, so for example it is a node (for example in OPS a suburb is a node), then ``geopolygon`` calculate an approximate circumference of the geographical area. To accomplish this task ``geopolygon`` uses the wikidata tag of that area to retrive the area surface A in <a href="https://www.codecogs.com/eqnedit.php?latex=km^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?km^2" title="km^2" /></a>. Then, it estimates the radius r as <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\sqrt{{A}/{\pi}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\sqrt{{A}/{\pi}}" title="r = \sqrt{{A}/{\pi}}" /></a>, obtaining the approximate circumference.
 
-The  OPS polygons usually does not have the correct building sequence, such as exemplified in Figure 1. To solve this issue, we applied the concave hull method proposed by Moreira et al. 2007, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure 1. 
+The  OPS polygons usually do not have the correct building sequence, such as exemplified in Figure 1. To solve this issue, we applied the concave hull method proposed by Moreira et al. 2007, which is based on a k-nearest neighbours algorithm. The concave hull improved all inspected problematic polygons, such as exemplified in Figure 1. 
 
 Figure 1:
 
