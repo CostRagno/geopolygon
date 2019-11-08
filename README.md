@@ -41,7 +41,7 @@ The ``geopolygon`` Python package provides two services:
 1. it retrieves a set of points that enclose a geographical area; 
 2. it computes the polygon that encompasses that set of points. 
 
-``geopolygon`` retrieves the set of points from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). To do that, it needs two informations, the *OPS element* and the *OPS ID*. The *OPS ID* is an unique code which identify each *OPS element*. 
+``geopolygon`` retrieves the set of points from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). To do that, it needs two information, the *OPS element* and the *OPS ID*. The *OPS ID* is an unique code which identify each *OPS element*. 
 
 *OPS elements* are the basic components of OpenStreetMap's conceptual data model of the physical world. They consist of: 
 
