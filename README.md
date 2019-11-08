@@ -36,7 +36,9 @@ performed by deriving the polygon area over the World surface to represent the C
 bounaries. The library have been used in our recent paper (Zola et al., 2019) for Twitter users geolocation to create a synthetic dataset starting from a frequency distribution of cities over the Globe surface.
 
 # The geopolygon Package
-The ``geopolygon`` Python package provides two kind of services. It retrieves the polygon of a geographical area from [OpenStreetMap (OPS)](https://www.openstreetmap.org/) and corrects the building sequence of the OPS polygons. To retrieve the polygons OPS polygons ``geopolygon`` needs two informations from OPS: the OPS element and the OPS ID. 
+The ``geopolygon`` Python package provides two kind of services. It retrieves a set of points that enclose a geographical area and compute the polygon that encompasses that set of points. 
+
+``geopolygon`` retrieves the set of point from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). To do that, it needs two informations from OPS: the OPS element and the OPS ID. 
 
 The OPS element identifies a geographical OPS object. It exists three OPS elements: 
 
