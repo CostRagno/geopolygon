@@ -1,13 +1,10 @@
-# geopolygon
----
-title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
-
+# geopolygon: retrieve and correctly reshape the polygon of a geographical area
+<!--title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
 tags:
   - Python
   - geoparsing
   - city polygons
   - concave hull
-  
 authors:
   - name: Costantino Ragno
     affiliation: 1 
@@ -19,7 +16,7 @@ affiliations:
  - name: IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
    index: 2
 date: November 2019
----
+-->
 # Summary
 
 Inferring the location of messages, people and events is an increasing branch of
