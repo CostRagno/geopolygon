@@ -1,5 +1,4 @@
-# geopolygon
-# Retrieve and correctly reshape the polygon of a geographical area
+# geopolygon: retrieve and correctly reshape the polygon of a geographical area
 <!--title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
 tags:
   - Python
