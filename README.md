@@ -38,7 +38,7 @@ bounaries. The library have been used in our recent paper (Zola et al., 2019b) f
 # The geopolygon Package
 The ``geopolygon`` Python package provides two services: 
 
-1. it retrieves a set of points enclosed in a geographical area, and
+1. it retrieves a set of points enclosed in a geographical area; and
 2. given the set of points, it computes the polygon. 
 
 ``geopolygon`` retrieves the set of points from [OpenStreetMap (OPS)](https://www.openstreetmap.org/). In order to obtain the data, ``geopolygon`` needs two information: the *OPS ID* and the *OPS element*. 
@@ -80,10 +80,10 @@ print(city_dict.keys())
 Out[1]: dict_keys(['type_polygon', 'raw_data', 'processed_data', 'center', 'location_info'])
 ```
 The output ``city_dict`` is a dictionary which contains:
-1. ``type_polygon``: can be "Concave Hull" or "Approximate Circumference",
-2. ``raw_data``: contains the raw polygon as scrapered from OPS,
-3. ``processed_data``: contains the polygon after being processed with the k-nearest neighbours algorithm,
-4. ``center``: contains the center of the polygon,
+1. ``type_polygon``: can be "Concave Hull" or "Approximate Circumference";
+2. ``raw_data``: contains the raw polygon as scrapered from OPS;
+3. ``processed_data``: contains the polygon after being processed with the k-nearest neighbours algorithm;
+4. ``center``: contains the center of the polygon;
 5. ``location_info``: a ``geopy`` object which contains all the information about the location. 
 
 # References
