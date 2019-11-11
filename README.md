@@ -1,8 +1,5 @@
 # geopolygon: retrieve and correctly reshape the polygon of a geographical area
 
-Authors:
-  + Costantino Ragno, ANIMA Holding S.p.a., Corso Giuseppe Garibaldi, 99 - 20121 Milano, Italy.
-  + Paola Zola, IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
 
 <!--title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
 tags:
@@ -21,6 +18,10 @@ affiliations:
  - name: IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
    index: 2
 date: November 2019
+Authors:
+  + Costantino Ragno, ANIMA Holding S.p.a., Corso Giuseppe Garibaldi, 99 - 20121 Milano, Italy.
+  + Paola Zola, IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
+
 -->
 # Summary
 
