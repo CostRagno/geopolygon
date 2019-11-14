@@ -21,6 +21,13 @@ date: November 2019
 Authors:
   + Costantino Ragno, ANIMA Holding S.p.a., Corso Giuseppe Garibaldi, 99 - 20121 Milano, Italy.
   + Paola Zola, IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
+
+bibliography: paper.bib
+
+# Optional fields if submitting to a AAS journal too, see this blog post:
+# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
+aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
+aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 # Summary
 
