@@ -1,7 +1,7 @@
 # geopolygon: retrieve and correctly reshape the polygon of a geographical area
 
 
-<!--title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
+title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
 tags:
   - Python
   - geoparsing
@@ -22,7 +22,6 @@ Authors:
   + Costantino Ragno, ANIMA Holding S.p.a., Corso Giuseppe Garibaldi, 99 - 20121 Milano, Italy.
   + Paola Zola, IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
 
--->
 # Summary
 
 Inferring the location of messages, people and events is an increasing branch of
@@ -57,7 +56,7 @@ For example, a city is a relation composed by ways and nodes. A Country is a col
 
 Thus, given the name of a geographical area, for example the name of a city; ``geopolygon`` uses the ``geopy`` Python package ([geopy](https://github.com/geopy/geopy)) to get the *OPS element* and the *OPS ID*. Having the *OPS element* and the *OPS ID*, ``geopolygon`` retrieves the coordinates of the polygon for the queried area.
 
-``geopolygon`` has been created in order to obtain the polygons of relations (cities, states and countries). Whenever a node or a way is given as input, ``geopolygon`` computes an approximated circumference of the area. In order to compute the approxmated circumference ``geopolygon`` uses the wikidata tag of the input area to retrive its surface A expressed in <a href="https://www.codecogs.com/eqnedit.php?latex=km^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?km^2" title="km^2" /></a>. Then, it estimates the radius r as <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\sqrt{{A}/{\pi}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\sqrt{{A}/{\pi}}" title="r = \sqrt{{A}/{\pi}}" /></a>, obtaining the approximated circumference.
+``geopolygon`` has been created in order to obtain the polygons of relations (cities, states and countries). Whenever a node or a way is given as input, ``geopolygon`` computes an approximated circumference of the area. In order to compute the approxmated circumference ``geopolygon`` uses the wikidata tag of the input area to retrive its surface A expressed in $km^2$. Then, it estimates the radius r as $r = \sqrt{{A}/{\pi}}$, obtaining the approximated circumference.
 
 In general, the points got from OPS do not have the correct building sequence as shown in Figure 1 (a) about New York city polygon. To avoid this limitation  and compute the correct polygon that encompasses the set of points, we applied the concave hull method proposed by Moreira et al. 2007. The algorithm proposed by Moreira et al. is based on a k-nearest neighbours algorithm and it generates the correct concave hull such as exemplified in Figure 1 (b) for the city of New York. 
 
