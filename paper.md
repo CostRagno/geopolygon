@@ -29,15 +29,15 @@ bibliography: paper.bib
 Inferring the location of messages, people and events is an increasing branch of
 researches nowadays. The wide amount of textual data from blogs, microblogs and 
 social media opened to new challenges and, for many application, the location 
-information is needed (Holsapple et al., 2018). 
+information is needed [@holsapple2018business]. 
 However, obtaining the geographic information directly from the messages or users in study is not easy and in many situation it is needed to estimate it.
-Moreover, especially for social media account information, the geographic indication is often not available at fine-grain resolution but only at Country or State level (Zola et al., 2019a). 
+Moreover, especially for social media account information, the geographic indication is often not available at fine-grain resolution but only at Country or State level [@zola2019twitter]. 
 Thus, to estimate a finer location for a given user/text, some computations and data trasformation are needed. 
 
 ``geopolygon`` is a Python library able to represent at coordinates level, the original 
 geographic information available at city or regional level. The representation is 
 performed by deriving the polygon area over the World surface to represent the City/Region 
-bounaries. The library have been used in our recent paper (Zola et al., 2019b) for Twitter users geolocation to create a synthetic dataset starting from a frequency distribution of cities over the Globe surface.
+bounaries. The library have been used in our recent paper [@carpita2019asa] for Twitter users geolocation to create a synthetic dataset starting from a frequency distribution of cities over the Globe surface.
 
 # The geopolygon Package
 The ``geopolygon`` Python package provides two services: 
@@ -60,7 +60,7 @@ Thus, given the name of a geographical area, for example the name of a city; ``g
 
 ``geopolygon`` has been created in order to obtain the polygons of relations (cities, states and countries). Whenever a node or a way is given as input, ``geopolygon`` computes an approximated circumference of the area. In order to compute the approxmated circumference ``geopolygon`` uses the wikidata tag of the input area to retrive its surface A expressed in $km^2$. Then, it estimates the radius r as $r = \sqrt{{A}/{\pi}}$, obtaining the approximated circumference.
 
-In general, the points got from OPS do not have the correct building sequence as shown in Figure 1 (a) about New York city polygon. To avoid this limitation  and compute the correct polygon that encompasses the set of points, we applied the concave hull method proposed by Moreira et al. 2007. The algorithm proposed by Moreira et al. is based on a k-nearest neighbours algorithm and it generates the correct concave hull such as exemplified in Figure 1 (b) for the city of New York. 
+In general, the points got from OPS do not have the correct building sequence as shown in Figure 1 (a) about New York city polygon. To avoid this limitation  and compute the correct polygon that encompasses the set of points, we applied the concave hull method proposed by Moreira et al. 2007. The algorithm proposed in [@moreira2007concave] is based on a k-nearest neighbours algorithm and it generates the correct concave hull such as exemplified in Figure 1 (b) for the city of New York. 
 
 Figure 1:
 
