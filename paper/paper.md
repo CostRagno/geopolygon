@@ -1,5 +1,3 @@
-# geopolygon: retrieve and correctly reshape the polygon of a geographical area
-
 ---
 title: 'geopolygon: retrieve and correctly reshape the polygon of a geographical area'
 tags:
@@ -13,15 +11,11 @@ authors:
   - name: Paola Zola
     affiliation: 2
 affiliations:
- - name: Costantino Ragno, University of Camerino, School of Science and Technologies, via M. delle Carceri 9, Camerino, MC, 62032, Italy.
+ - name: University of Camerino, School of Science and Technologies, via M. delle Carceri 9, Camerino, MC, 62032, Italy.
    index: 1
  - name: IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
    index: 2
 date: November 2019
-Authors:
-   + Costantino Ragno, University of Camerino, School of Science and Technologies, via M. delle Carceri 9, Camerino, MC, 62032, Italy.
-  + Paola Zola, IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
-
 bibliography: paper.bib
 ---
 # Summary
