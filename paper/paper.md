@@ -13,7 +13,7 @@ authors:
   - name: Paola Zola
     affiliation: 2
 affiliations:
- - name: ANIMA Holding S.p.a., Corso Giuseppe Garibaldi, 99 - 20121 Milano.
+ - name: Costantino Ragno, University of Camerino, School of Science and Technologies, via M. delle Carceri 9, Camerino, MC, 62032, Italy.
    index: 1
  - name: IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
    index: 2
