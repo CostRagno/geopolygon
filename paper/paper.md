@@ -19,7 +19,7 @@ affiliations:
    index: 2
 date: November 2019
 Authors:
-  + Costantino Ragno, ANIMA Holding S.p.a., Corso Giuseppe Garibaldi, 99 - 20121 Milano, Italy.
+   + Costantino Ragno, University of Camerino, School of Science and Technologies, via M. delle Carceri 9, Camerino, MC, 62032, Italy.
   + Paola Zola, IIT-CNR, Via G. Moruzzi 1, 56124 Pisa, Italy.
 
 bibliography: paper.bib
