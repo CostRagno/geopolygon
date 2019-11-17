@@ -58,9 +58,9 @@ In general, the points got from OPS do not have the correct building sequence as
 
 Figure 1:
 
-a: OPS raw polygon            |  b: Reshaped polygon 
+a: OPS raw polygon            |  b: Reshaped polygon
 :-------------------------:|:-------------------------:
-![](https://github.com/CostRagno/geopolygon/blob/master/images/new_york_red-1.png)  |  ![](https://github.com/CostRagno/geopolygon/blob/master/images/new_york_green-1.png)
+![](https://raw.githubusercontent.com/CostRagno/geopolygon/master/images/new_york_red-1.png){ width=250px }  |  ![](https://raw.githubusercontent.com/CostRagno/geopolygon/master/images/new_york_green-1.png){ width=250px }
 
 # Example Usage 
 The installation of ``geopolygon`` is available via [Python Package Index (pip)](https://pypi.org/project/geopolygon/), by running the following command:
@@ -85,13 +85,3 @@ The output ``city_dict`` is a dictionary which contains:
 5. ``location_info``: a ``geopy`` object which contains all the information about the location. 
 
 # References
-Holsapple, C. W., Hsiao, S. H., & Pakath, R. (2018). Business social media analytics: Characterization and conceptual framework. Decision Support Systems, 110, 32-45.
-
-Moreira, A., & Santos, M. Y. (2007). Concave hull: A k-nearest neighbours approach for the computation of the region occupied by a set of points.
-
-Zola, P., Cortez, P., & Carpita, M. (2019a). Twitter user geolocation using web country noun searches. Decision Support Systems, 120, 50-59.
-
-Zola, P., & Ragno, C., & Cortez, P. (2019b, October). Inferring Twitter users home location based on trend topics. In ASA CONFERENCE 2019 Statistics for Health and Well-being BOOK OF SHORT PAPERS.
-
-
-
